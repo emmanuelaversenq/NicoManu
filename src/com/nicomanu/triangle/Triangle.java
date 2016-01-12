@@ -66,10 +66,14 @@ public class Triangle {
 	 * @return
 	 */
 	public boolean testTriangleRectangle() {
-		boolean result = false;
-		result = (Math.pow(cote1,2) + Math.pow(cote2, 2) == Math.pow(cote3, 2));
+		boolean result1 = false;
+		boolean result2 = false;
+		boolean result3 = false;
+		result1 = (Math.pow(cote1,2) + Math.pow(cote2, 2) == Math.pow(cote3, 2));
+		result2 = (Math.pow(cote2,2) + Math.pow(cote3, 2) == Math.pow(cote1, 2));
+		result3 = (Math.pow(cote3,2) + Math.pow(cote1, 2) == Math.pow(cote2, 2));
 		
-		return result;
+		return result1 || result2 || result3;
 	}
 	
 	@Override
