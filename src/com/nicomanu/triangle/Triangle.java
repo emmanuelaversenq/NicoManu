@@ -60,6 +60,10 @@ public class Triangle {
 		
 	}
 	
+	/**
+	 * Test de la forme triangle rectangle
+	 * @return
+	 */
 	public boolean testTriangleRectangle() {
 		boolean result = false;
 		result = (Math.pow(cote1,2) + Math.pow(cote2, 2) == Math.pow(cote3, 2));
