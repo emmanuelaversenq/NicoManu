@@ -38,7 +38,7 @@ public class Triangle {
 		String forme = "non identifiable";
 		if (cote1 == cote2 && cote2 == cote3) {
 			forme = "triangle isocèle";
-		} else if (Math.pow(cote1,2) + Math.pow(cote2, 2) == Math.pow(cote3, 2)) {
+		} else if (testTriangleRectangle()) {
 			forme = "triangle rectangle";
 		}
 			
@@ -58,6 +58,13 @@ public class Triangle {
 		perimetre = cote1 + cote2 + cote3;
 		return perimetre;
 		
+	}
+	
+	public boolean testTriangleRectangle() {
+		boolean result = false;
+		result = (Math.pow(cote1,2) + Math.pow(cote2, 2) == Math.pow(cote3, 2));
+		
+		return result;
 	}
 	
 	@Override
