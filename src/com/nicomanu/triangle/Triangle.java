@@ -66,6 +66,8 @@ public class Triangle {
 	 * @return
 	 */
 	public boolean testTriangleRectangle() {
+
+//test du triangle rectangle
 		boolean result1 = false;
 		boolean result2 = false;
 		boolean result3 = false;
@@ -74,7 +76,8 @@ public class Triangle {
 		result3 = (Math.pow(cote3,2) + Math.pow(cote1, 2) == Math.pow(cote2, 2));
 		
 		return result1 || result2 || result3;
-	}
+
+}
 	
 	@Override
 	public String toString() {
