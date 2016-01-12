@@ -1,5 +1,6 @@
 package com.nicomanu.triangle;
 
+// Class Triangle
 public class Triangle {
 
 
