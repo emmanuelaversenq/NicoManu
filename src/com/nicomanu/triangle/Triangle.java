@@ -49,9 +49,9 @@ public class Triangle {
 	
 	  public void calculLongueurCote()
 	  {
-	    cote1 = Math.sqrt(Math.pow((b.getX()-a.getX()),2)*Math.pow((b.getY()-a.getY()),2));
-	    cote2 = Math.sqrt(Math.pow((c.getX()-b.getX()),2)*Math.pow((c.getY()-b.getY()),2));
-	    cote3 = Math.sqrt(Math.pow((a.getX()-c.getX()),2)*Math.pow((a.getY()-c.getY()),2));
+	    cote1 = Math.sqrt(Math.pow((b.getX()-a.getX()),2)+Math.pow((b.getY()-a.getY()),2));
+	    cote2 = Math.sqrt(Math.pow((c.getX()-b.getX()),2)+Math.pow((c.getY()-b.getY()),2));
+	    cote3 = Math.sqrt(Math.pow((a.getX()-c.getX()),2)+Math.pow((a.getY()-c.getY()),2));
 	  }	
 
 	public double calculPerimetre() {
@@ -71,9 +71,9 @@ public class Triangle {
 		boolean result1 = false;
 		boolean result2 = false;
 		boolean result3 = false;
-		result1 = (Math.pow(cote1,2) + Math.pow(cote2, 2) == Math.pow(cote3, 2));
-		result2 = (Math.pow(cote2,2) + Math.pow(cote3, 2) == Math.pow(cote1, 2));
-		result3 = (Math.pow(cote3,2) + Math.pow(cote1, 2) == Math.pow(cote2, 2));
+		result1 = Math.abs((Math.pow(cote1,2) + Math.pow(cote2, 2) - Math.pow(cote3, 2))) < 0.01;
+		result2 = Math.abs((Math.pow(cote2,2) + Math.pow(cote3, 2) - Math.pow(cote1, 2))) < 0.01;
+		result3 = Math.abs((Math.pow(cote3,2) + Math.pow(cote1, 2) - Math.pow(cote2, 2))) < 0.01;
 		
 		return result1 || result2 || result3;
 
